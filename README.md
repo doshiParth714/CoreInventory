@@ -1,0 +1,2 @@
+# CoreInventory
+odoo hackothon project
