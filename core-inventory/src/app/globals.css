@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.5); /* indigo-500 */
+}
+
+/* 
+ * Magical Light Mode for Dark-First UI!
+ * Since the app utilizes hard-coded dark utility classes (like text-white, border-white/10),
+ * standard theming requires rewriting thousands of components. 
+ * This clever trick physically inverts the luminance of everything on the page 
+ * while rotating the hue back 180deg to perfectly preserve true colors (blues stay blue, reds stay red).
+ */
+html.light-mode {
+  filter: invert(1) hue-rotate(180deg) saturate(1.1);
+}
+
+/* Stop images and videos from being inverted into nightmares! */
+html.light-mode img,
+html.light-mode video,
+html.light-mode canvas {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Adjust some contrast for specific borders if necessary */
+html.light-mode ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05); /* Inverted */
+}
