@@ -1,0 +1,6 @@
+src/app/(app)/settings/page.tsx(36,39): error TS7006: Parameter 'wh' implicitly has an 'any' type.
+src/app/(app)/settings/page.tsx(72,38): error TS7006: Parameter 'loc' implicitly has an 'any' type.
+src/app/(app)/settings/page.tsx(90,51): error TS7006: Parameter 'w' implicitly has an 'any' type.
+src/lib/db.ts(1,10): error TS2305: Module '"@prisma/client"' has no exported member 'PrismaClient'.
+src/server/routers/products.ts(61,47): error TS7006: Parameter 'tx' implicitly has an 'any' type.
+src/server/routers/products.ts(127,47): error TS7006: Parameter 'tx' implicitly has an 'any' type.

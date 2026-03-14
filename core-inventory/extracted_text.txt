@@ -1,0 +1,184 @@
+Login Id\n\nPassword\n\nForget Password ? | Sign Up\n\nApp Logo\n\nSIGN IN\n\n- Check for Login Credentials
+-Match creds, and allow to login a user
+-If Creds does not match thrw an error msg, 
+"Invalid Login Id or Password"
+- When clicked on SignUp, Land to SignUp page
+-When Clicked on Forget Password click on Forget Password page\n\nSIGN UP\n\nLogin Page\n\nSign up Page\n\nFor Sign up Page,
+Ceate a user database into the system on signup
+Check creds as follows
+1. login ID should be unique and must be in between 6-12 charachters.
+2. Email Id should not be a duplicate in database
+3.Password must me unique and must contain a small case, a large case and 
+a special character and length should be in more then 8 charachters. \n\nEnter Login Id\n\nEnter Password\n\nRe-Enter Password\n\nEnter Email Id\n\nLogin/Signup\n\nDashboard\n\nReciept\n\n4 to receive\n\n1 Late
+6 operations\n\nDelivery\n\n4 to Deliver\n\n1 Late
+2 waiting
+6 operations\n\nOperations\n\nStock \n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nDashboard to display the 
+current statistics\n\nOperation can be 
+perform Submenu
+1. Reciept
+2. Delivery
+3. Adjustment\n\nList the available stock\n\nDisplay the history 
+of In/Out stocks\n\n1. Warehouse
+2. Locations\n\nWhen user click on receipt operations\n\nReciepts\n\nBy default land on List View\n\nReference\n\nContact\n\nSchedule date\n\nStatus\n\nWH/IN/0001\n\nAzure Interior\n\nReady\n\nPopulate all work orders added to manufacturing order \n\nAllow user to search receptive based on reference & contacts\n\nWH/IN/0002\n\nAzure Interior\n\nReady\n\nAllow user to switch to the kanban view based on status\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nWhen user click on Delivery operations\n\nDelivery\n\nBy default land on List View\n\nReference\n\nContact\n\nSchedule date\n\nStatus\n\nWH/OUT/0001\n\nAzure Interior\n\nReady\n\nPopulate all delivery orders  \n\nAllow user to search Delivery based on reference & contacts\n\nWH/OUT/0002\n\nAzure Interior\n\nReady\n\nAllow user to switch to the kanban view based on status\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nReference should be auto
+increment & follow the below 
+structer 
+
+
+WH/IN/001
+
+<Warehouse>/<Operation>/<ID>
+
+Warehouse = Id of warehouse
+operation = IN/OUT
+Id = auto incremental unique id  \n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nWarehouse\n\nName:
+
+Short Code: 
+
+Address:  \n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nReceipt\n\nWH/IN/0001\n\nReceive From\n\nSchedule Date\n\nDraft > Ready > Done\n\nNEW\n\nNEW\n\nNew\n\nValidate\n\nPrint\n\nCancel\n\nResponsible\n\nProducts\n\nNew Product\n\nProduct\n\nQuantity\n\n[DESK001] Desk\n\n6\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nDelivery\n\nWH/OUT/0001\n\nDelivery Adress\n\nSchedule Date\n\nOperation type\n\nDraft > Waiting>  Ready > Done\n\nNew\n\nValidate\n\nPrint\n\nCancel\n\nResponsible\n\nProducts\n\nNew Product\n\nProduct\n\nQuantity\n\n[DESK001] Desk\n\n6\n\nWhen user click on Move History\n\nMove History\n\nBy default land on List View\n\nReference\n\nContact\n\nStatus\n\nWH/IN/0001\n\nAzure Interior\n\nReady\n\nPopulate all moves done between the from - To
+location in inventory
+
+if single reference has multiple product display it
+in multiple rows.
+
+In event should be display in green
+Out moves should be display in rend\n\nAllow user to search Delivery based on reference & contacts\n\nWH/OUT/0002\n\nAzure Interior\n\nReady\n\nAllow user to switch to the kanban view based on status\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nNEW\n\nDate\n\n12/1/2001\n\n12/1/2001\n\nTo DO = When in Draft
+Validate = When in Ready\n\nOn click, TODO, move to Ready
+
+onclick, Validate move to Done\n\nPrint the receipt once it's DONE\n\nDraft: Initial state
+Waiting: Waiting for the out of stock product to be in
+Ready: Ready to deliver/receive
+Done: Received or delivered\n\nDraft - Initial stage
+Ready - Ready to receive
+Done -  Recieved\n\nAlert the notification & mark the line red if 
+product is not in stock.\n\nAdd New product\n\nThis page contains the warehouse details & location.\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nStock\n\nThis page contains the warehouse details & location.\n\nProduct          per unit cost                      On hand                    free to Use  \n\nDesk\n\n3000 Rs\n\n50\n\n45\n\nTable\n\n3000 Rs\n\n50\n\n50\n\nUser must be able to update the stock from here. \n\nLate: schedule date < today's date
+
+Operations: schedule date > today's date
+
+Waiting: Waiting for the stocks \n\nAuto fill with the current logged in 
+users.\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nlocation\n\nName:
+
+Short Code: 
+
+warehouse:  \n\nThis holds the multiple locations of warehouse, rooms etc..\n\nWH\n\nFrom\n\nTo\n\nvendor\n\nvendor\n\nFrom\n\nTo\n\nWH/Stock1\n\nWH/Stock1\n\nvendor\n\nvendor\n\nWH/Stock1\n\nWH/Stock1\n\nLocations of warehouse\n\nFrom\n\nTo\n\nQuantity\n\nWH/OUT/0002\n\nAzure Interior\n\nReady\n\n12/1/2001\n\nWH/Stock1\n\nvendor\n\nvendor\n\nWH/Stock2\n\nvendor\n\nWH/Stock1\n\nLogin Id\n\nPassword\n\nForget Password ? | Sign Up\n\nApp Logo\n\nSIGN IN\n\n- Check for Login Credentials
+-Match creds, and allow to login a user
+-If Creds does not match thrw an error msg, 
+"Invalid Login Id or Password"
+- When clicked on SignUp, Land to SignUp page
+-When Clicked on Forget Password click on Forget Password page\n\nSIGN UP\n\nLogin Page\n\nSign up Page\n\nFor Sign up Page,
+Ceate a user database into the system on signup
+Check creds as follows
+1. login ID should be unique and must be in between 6-12 charachters.
+2. Email Id should not be a duplicate in database
+3.Password must me unique and must contain a small case, a large case and 
+a special character and length should be in more then 8 charachters. \n\nEnter Login Id\n\nEnter Password\n\nRe-Enter Password\n\nEnter Email Id\n\nLogin/Signup\n\nDashboard\n\nReciept\n\n4 to receive\n\n1 Late
+6 operations\n\nDelivery\n\n4 to Deliver\n\n1 Late
+2 waiting
+6 operations\n\nOperations\n\nStock \n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nDashboard to display the 
+current statistics\n\nOperation can be 
+perform Submenu
+1. Reciept
+2. Delivery
+3. Adjustment\n\nList the available stock\n\nDisplay the history 
+of In/Out stocks\n\n1. Warehouse
+2. Locations\n\nWhen user click on receipt operations\n\nReciepts\n\nBy default land on List View\n\nReference\n\nContact\n\nSchedule date\n\nStatus\n\nWH/IN/0001\n\nAzure Interior\n\nReady\n\nPopulate all work orders added to manufacturing order \n\nAllow user to search receptive based on reference & contacts\n\nWH/IN/0002\n\nAzure Interior\n\nReady\n\nAllow user to switch to the kanban view based on status\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nWhen user click on Delivery operations\n\nDelivery\n\nBy default land on List View\n\nReference\n\nContact\n\nSchedule date\n\nStatus\n\nWH/OUT/0001\n\nAzure Interior\n\nReady\n\nPopulate all delivery orders  \n\nAllow user to search Delivery based on reference & contacts\n\nWH/OUT/0002\n\nAzure Interior\n\nReady\n\nAllow user to switch to the kanban view based on status\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nReference should be auto
+increment & follow the below 
+structer 
+
+
+WH/IN/001
+
+<Warehouse>/<Operation>/<ID>
+
+Warehouse = Id of warehouse
+operation = IN/OUT
+Id = auto incremental unique id  \n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nWarehouse\n\nName:
+
+Short Code: 
+
+Address:  \n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nReceipt\n\nWH/IN/0001\n\nReceive From\n\nSchedule Date\n\nDraft > Ready > Done\n\nNEW\n\nNEW\n\nNew\n\nValidate\n\nPrint\n\nCancel\n\nResponsible\n\nProducts\n\nNew Product\n\nProduct\n\nQuantity\n\n[DESK001] Desk\n\n6\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nDelivery\n\nWH/OUT/0001\n\nDelivery Adress\n\nSchedule Date\n\nOperation type\n\nDraft > Waiting>  Ready > Done\n\nNew\n\nValidate\n\nPrint\n\nCancel\n\nResponsible\n\nProducts\n\nNew Product\n\nProduct\n\nQuantity\n\n[DESK001] Desk\n\n6\n\nWhen user click on Move History\n\nMove History\n\nBy default land on List View\n\nReference\n\nContact\n\nStatus\n\nWH/IN/0001\n\nAzure Interior\n\nReady\n\nPopulate all moves done between the from - To
+location in inventory
+
+if single reference has multiple product display it
+in multiple rows.
+
+In event should be display in green
+Out moves should be display in rend\n\nAllow user to search Delivery based on reference & contacts\n\nWH/OUT/0002\n\nAzure Interior\n\nReady\n\nAllow user to switch to the kanban view based on status\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nNEW\n\nDate\n\n12/1/2001\n\n12/1/2001\n\nTo DO = When in Draft
+Validate = When in Ready\n\nOn click, TODO, move to Ready
+
+onclick, Validate move to Done\n\nPrint the receipt once it's DONE\n\nDraft: Initial state
+Waiting: Waiting for the out of stock product to be in
+Ready: Ready to deliver/receive
+Done: Received or delivered\n\nDraft - Initial stage
+Ready - Ready to receive
+Done -  Recieved\n\nAlert the notification & mark the line red if 
+product is not in stock.\n\nAdd New product\n\nThis page contains the warehouse details & location.\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nStock\n\nThis page contains the warehouse details & location.\n\nProduct          per unit cost                      On hand                    free to Use  \n\nDesk\n\n3000 Rs\n\n50\n\n45\n\nTable\n\n3000 Rs\n\n50\n\n50\n\nUser must be able to update the stock from here. \n\nLate: schedule date < today's date
+
+Operations: schedule date > today's date
+
+Waiting: Waiting for the stocks \n\nAuto fill with the current logged in 
+users.\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nlocation\n\nName:
+
+Short Code: 
+
+warehouse:  \n\nThis holds the multiple locations of warehouse, rooms etc..\n\nWH\n\nFrom\n\nTo\n\nvendor\n\nvendor\n\nFrom\n\nTo\n\nWH/Stock1\n\nWH/Stock1\n\nvendor\n\nvendor\n\nWH/Stock1\n\nWH/Stock1\n\nLocations of warehouse\n\nFrom\n\nTo\n\nQuantity\n\nWH/OUT/0002\n\nAzure Interior\n\nReady\n\n12/1/2001\n\nWH/Stock1\n\nvendor\n\nvendor\n\nWH/Stock2\n\nvendor\n\nWH/Stock1\n\nLogin Id\n\nPassword\n\nForget Password ? | Sign Up\n\nApp Logo\n\nSIGN IN\n\n- Check for Login Credentials
+-Match creds, and allow to login a user
+-If Creds does not match thrw an error msg, 
+"Invalid Login Id or Password"
+- When clicked on SignUp, Land to SignUp page
+-When Clicked on Forget Password click on Forget Password page\n\nSIGN UP\n\nLogin Page\n\nSign up Page\n\nFor Sign up Page,
+Ceate a user database into the system on signup
+Check creds as follows
+1. login ID should be unique and must be in between 6-12 charachters.
+2. Email Id should not be a duplicate in database
+3.Password must me unique and must contain a small case, a large case and 
+a special character and length should be in more then 8 charachters. \n\nEnter Login Id\n\nEnter Password\n\nRe-Enter Password\n\nEnter Email Id\n\nLogin/Signup\n\nDashboard\n\nReciept\n\n4 to receive\n\n1 Late
+6 operations\n\nDelivery\n\n4 to Deliver\n\n1 Late
+2 waiting
+6 operations\n\nOperations\n\nStock \n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nDashboard to display the 
+current statistics\n\nOperation can be 
+perform Submenu
+1. Reciept
+2. Delivery
+3. Adjustment\n\nList the available stock\n\nDisplay the history 
+of In/Out stocks\n\n1. Warehouse
+2. Locations\n\nWhen user click on receipt operations\n\nReciepts\n\nBy default land on List View\n\nReference\n\nContact\n\nSchedule date\n\nStatus\n\nWH/IN/0001\n\nAzure Interior\n\nReady\n\nPopulate all work orders added to manufacturing order \n\nAllow user to search receptive based on reference & contacts\n\nWH/IN/0002\n\nAzure Interior\n\nReady\n\nAllow user to switch to the kanban view based on status\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nWhen user click on Delivery operations\n\nDelivery\n\nBy default land on List View\n\nReference\n\nContact\n\nSchedule date\n\nStatus\n\nWH/OUT/0001\n\nAzure Interior\n\nReady\n\nPopulate all delivery orders  \n\nAllow user to search Delivery based on reference & contacts\n\nWH/OUT/0002\n\nAzure Interior\n\nReady\n\nAllow user to switch to the kanban view based on status\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nReference should be auto
+increment & follow the below 
+structer 
+
+
+WH/IN/001
+
+<Warehouse>/<Operation>/<ID>
+
+Warehouse = Id of warehouse
+operation = IN/OUT
+Id = auto incremental unique id  \n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nWarehouse\n\nName:
+
+Short Code: 
+
+Address:  \n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nReceipt\n\nWH/IN/0001\n\nReceive From\n\nSchedule Date\n\nDraft > Ready > Done\n\nNEW\n\nNEW\n\nNew\n\nValidate\n\nPrint\n\nCancel\n\nResponsible\n\nProducts\n\nNew Product\n\nProduct\n\nQuantity\n\n[DESK001] Desk\n\n6\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nDelivery\n\nWH/OUT/0001\n\nDelivery Adress\n\nSchedule Date\n\nOperation type\n\nDraft > Waiting>  Ready > Done\n\nNew\n\nValidate\n\nPrint\n\nCancel\n\nResponsible\n\nProducts\n\nNew Product\n\nProduct\n\nQuantity\n\n[DESK001] Desk\n\n6\n\nWhen user click on Move History\n\nMove History\n\nBy default land on List View\n\nReference\n\nContact\n\nStatus\n\nWH/IN/0001\n\nAzure Interior\n\nReady\n\nPopulate all moves done between the from - To
+location in inventory
+
+if single reference has multiple product display it
+in multiple rows.
+
+In event should be display in green
+Out moves should be display in rend\n\nAllow user to search Delivery based on reference & contacts\n\nWH/OUT/0002\n\nAzure Interior\n\nReady\n\nAllow user to switch to the kanban view based on status\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nNEW\n\nDate\n\n12/1/2001\n\n12/1/2001\n\nTo DO = When in Draft
+Validate = When in Ready\n\nOn click, TODO, move to Ready
+
+onclick, Validate move to Done\n\nPrint the receipt once it's DONE\n\nDraft: Initial state
+Waiting: Waiting for the out of stock product to be in
+Ready: Ready to deliver/receive
+Done: Received or delivered\n\nDraft - Initial stage
+Ready - Ready to receive
+Done -  Recieved\n\nAlert the notification & mark the line red if 
+product is not in stock.\n\nAdd New product\n\nThis page contains the warehouse details & location.\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nStock\n\nThis page contains the warehouse details & location.\n\nProduct          per unit cost                      On hand                    free to Use  \n\nDesk\n\n3000 Rs\n\n50\n\n45\n\nTable\n\n3000 Rs\n\n50\n\n50\n\nUser must be able to update the stock from here. \n\nLate: schedule date < today's date
+
+Operations: schedule date > today's date
+
+Waiting: Waiting for the stocks \n\nAuto fill with the current logged in 
+users.\n\nOperations\n\nProducts\n\nMove History\n\nSettings\n\nDashboard\n\nA\n\nlocation\n\nName:
+
+Short Code: 
+
+warehouse:  \n\nThis holds the multiple locations of warehouse, rooms etc..\n\nWH\n\nFrom\n\nTo\n\nvendor\n\nvendor\n\nFrom\n\nTo\n\nWH/Stock1\n\nWH/Stock1\n\nvendor\n\nvendor\n\nWH/Stock1\n\nWH/Stock1\n\nLocations of warehouse\n\nFrom\n\nTo\n\nQuantity\n\nWH/OUT/0002\n\nAzure Interior\n\nReady\n\n12/1/2001\n\nWH/Stock1\n\nvendor\n\nvendor\n\nWH/Stock2\n\nvendor\n\nWH/Stock1
